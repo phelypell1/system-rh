@@ -15,6 +15,11 @@
 	<description>Projeto para controle sedex, entrada e saída.</description>
 
 	<properties>
+		<!-- configuração de encoding para o build e report(relatórios) do projeto -->
+		<enconding>UTF-8</enconding>
+		<project.build.sourceEncoding>${enconding}</project.build.sourceEncoding>
+		<project.reporting.outputEnconding>${enconding}</project.reporting.outputEnconding>
+		<swagger.version>2.9.2</swagger.version>
 		<java.version>1.8</java.version>
 	</properties>
 
@@ -49,6 +54,26 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- swagger - Auxilia e publica uma api de testes para o cliente -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-spring-web -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-spring-web</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
