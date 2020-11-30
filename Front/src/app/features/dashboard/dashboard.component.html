@@ -1,0 +1,15 @@
+<p-dataView>
+    <p-header>List of produtos</p-header>
+    <p-footer>Choose from the list.</p-footer>
+    <ng-template let-produto pTemplate="listItem">
+        <div id="principal">
+            <div>
+                {{produto.idProduto}}
+                <span> {{produto.descricao}}</span>
+                <img [src]="'assets/images-produtos/' + imagem"/>
+            </div>
+
+
+    </div>
+    </ng-template>
+</p-dataView>

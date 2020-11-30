@@ -16,20 +16,23 @@ import lombok.NoArgsConstructor;
 @Table(name = "db_bancos")
 public class Bancos {
 	
-	@Id
+	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_banco")
 	private Long id_banco;
 	
+	@Column(name = "codigo_banco", nullable = true, length = 6)
+	private String codigo_banco;
+	
 	@Column(name = "nome_banco", nullable = false, length = 150)
 	private String nome_banco;
 	
-	@Column(name = "bancoAbrev", nullable = true, length = 50)
+	@Column(name = "bancoAbrev", nullable = true, length = 150)
 	private String bancoAbrev;
 
 	public Long getId_banco() {
 		return id_banco;
-	}
+	} 
 
 	public void setId_banco(Long id_banco) {
 		this.id_banco = id_banco;
@@ -50,4 +53,14 @@ public class Bancos {
 	public void setBancoAbrev(String bancoAbrev) {
 		this.bancoAbrev = bancoAbrev;
 	}
+
+	public String getCodigo_banco() {
+		return codigo_banco;
+	}
+
+	public void setCodigo_banco(String codigo_banco) {
+		this.codigo_banco = codigo_banco;
+	}
+	
+	
 }

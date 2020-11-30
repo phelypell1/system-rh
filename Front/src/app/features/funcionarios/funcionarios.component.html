@@ -1,0 +1,160 @@
+<p-panel header="Cadastro funcionários">
+  <form>
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-field p-col-12 p-sm-4">
+          <label for="nome">Nome Completo.:</label>
+          <input type="text" name="nome" id="nome" pInputText />
+        </div>
+
+        <div class="p-field p-col-12 p-sm-1">
+          <label for="nome">Matrícula.:</label>
+          <input type="text" name="nome" id="nome" maxlength="4" pInputText />
+        </div>
+
+        <div class="p-field p-col-12 p-sm-1">
+          <label for="nome">MEX.:</label>
+          <input type="text" name="nome" id="nome" maxlength="4" pInputText />
+        </div>
+
+        <div class="p-field p-col-12 p-sm-2">
+          <label for="nome">CPF.:</label>
+          <p-inputMask
+            type="text"
+            name="nome"
+            id="nome"
+            mask="999-999-999-99"
+          ></p-inputMask>
+        </div>
+
+        <div class="p-field p-col-12 p-sm-2">
+          <label for="nome">RG.:</label>
+          <input type="text" name="nome" id="nome" maxlength="8" pInputText />
+        </div>
+
+        <div class="p-field p-col-12 p-sm-2">
+          <label for="nome">DT.Nascimento.:</label>
+          <input type="date" name="nome" id="nome" pInputText />
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Dados Carteira Trabalho</legend>
+      <div class="p-fluid p-formgrid p-grid">
+
+        <div class="p-field p-col-12 p-sm-2">
+          <label for="nome">Número.:</label>
+          <input
+            type="text"
+            name="nome"
+            id="nome"
+            maxlength="7"
+            pInputText
+          />
+        </div>
+
+        <div class="p-field p-col-12 p-sm-1">
+          <label for="nome">Série.:</label>
+          <p-inputMask
+          type="text"
+          name="nome"
+          id="nome"
+          mask="999-9"
+        ></p-inputMask>
+        </div>
+
+        <div class="p-field p-col-12 p-sm-2">
+          <label for="nome">PIS.:</label>
+          <p-inputMask
+          type="text"
+          name="nome"
+          id="nome"
+          mask="999.99999.99-9"
+        ></p-inputMask>
+        </div>
+
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Dados Bancários:</legend>
+      <div class="p-fluid p-formgrid p-grid">
+
+        <div class="p-field p-col-12 p-sm-12">
+          <label for="nome">Banco.:</label>
+          <p-dropdown [options]="banco" optionLabel="nome_banco" filter="true" placeholder="SELECIONE"></p-dropdown>
+        </div>
+
+        <div class="p-field p-col-12 p-sm-2">
+          <label for="nome">Agência.:</label>
+          <input type="text" name="" id="" pInputText placeholder="EX:000000">
+        </div>
+
+        <div class="p-field p-col-12 p-sm-3">
+          <label for="nome">Número Conta.:</label>
+          <input type="text" name="" id="" pInputText placeholder="Conta + digito verificador">
+        </div>
+
+        <div class="p-field p-col-12 p-sm-1">
+          <label for="nome">Operação.:</label>
+          <input type="text" name="" id="" pInputText placeholder="EX: 013">
+        </div>
+
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Dados Empregaticios:</legend>
+      <div class="p-fluid p-formgrid p-grid">
+
+        <div class="p-field p-col-12 p-sm-2">
+          <label for="nome">Salario.:</label>
+          <p-inputNumber mode="currency" currency="BRL" locale="pt-BR"></p-inputNumber>
+        </div>
+
+        <div class="p-field p-col-12 p-sm-2">
+          <label for="nome">Vale Transporte.:</label>
+          <p-dropdown [options]="valeTransporte"  optionLabel="label" placeholder="SELECIONE"></p-dropdown>
+        </div>
+
+        <div class="p-field p-col-12 p-sm-2">
+          <label for="nome">Locação.:</label>
+          <p-dropdown [options]="locacao"  optionLabel="label" placeholder="SELECIONE"></p-dropdown>
+        </div>
+
+        <div class="p-field p-col-12 p-sm-3">
+          <label for="nome">Cargo.:</label>
+          <p-dropdown [options]="cargos"  optionLabel="cargo" placeholder="SELECIONE" filter="true"></p-dropdown>
+        </div>
+
+        <div class="p-field p-col-12 p-sm-2">
+          <label for="nome">Situação.:</label>
+          <p-dropdown [options]="situacao"  optionLabel="label" placeholder="SELECIONE"></p-dropdown>
+        </div>
+
+      </div>
+    </fieldset>
+    <br />
+
+    <div class="p-fluid p-formgrid p-grid center">
+      <div class="p-field p-col-12 p-sm-2">
+        <button
+          pButton
+          class="ui-button-raised ui-button-success"
+          icon="fas fa-user-plus"
+          label="Cadastrar"
+        ></button>
+      </div>
+      <div class="p-field p-col-12 p-sm-2">
+        <button
+          pButton
+          class="ui-button-raised ui-button-danger"
+          icon="fas fa-ban"
+          label="Cancelar"
+        ></button>
+      </div>
+    </div>
+  </form>
+</p-panel>
